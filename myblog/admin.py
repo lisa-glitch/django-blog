@@ -10,3 +10,4 @@ admin.site.register(Post)
 admin.site.register(Comment)
 admin.site.register(Image)
 admin.site.register(Share)
+
