@@ -1,7 +1,217 @@
-<div class="main">
-    {% for data in dataset %}
-    {{data.name}}<br>
-    {{data.created_at}}<br>
-    <hr/>
-    {% endfor %}
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--Start of Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-grey">
+            <a class="navbar-brand" href="/"><img src="logo.jpg"class="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#index">Welcome<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#leaders">Leaders</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#support">Support</a>
+                </li>
+              </ul>
+              <button class="btn btn-primary" href="#contact">
+                Contact
+              </span>
+            </div>
+          </nav>
+          <!--End of Navbar-->
+        <div class="container-fluid">
+            <!--Beginning of Welcome/Index.html-->
+            <section id="index">
+              <div class="row justify-content-center my-5">
+                <div class="col-md-6 col-lg-6 col-sm-12 mt-5">
+                    <h1 class="my-5"><strong>Relationship Haven.<br>Bridging Gaps in Humanity.<strong></strong></h1>
+                </div>
+                <div class="col md-6 col-lg-6 col-sm-12">
+                    <img class="welcome-image my-auto" src="first-image.svg">
+                </div>
+            </div>
+            </section>
+            <!--End of Index/Welcome Page-->
+            <!--Beginning of About Page-->
+            <section id="about">
+              <h2 class="text-center my-5"><strong>About Relationship Haven</strong></h2>
+              <div class="row justify-content-center my-5">
+                <div class="col-md-6 col-lg-6 col-sm-12 justify-content-center">
+                  <p style="color: #8b8a8c;">Relationship Haven is a Nairobi-based community organization.<br>We champion for the rights of women and children through activities such as:
+                    <ul style="color: #8b8a8c;">
+                      <li>Youth and Women Mentorship and Empowerment</li>
+                      <li>Child Rescue</li>
+                      <li>Environmentalism</li>
+                    </ul>
+                  </p>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12">
+                  <img class="welcome-image" src="children.svg">
+                </div>
+              </div>
+            </section>
+           
+            <!--End of About Page-->
+            <!--Beginning of Services Page-->
+            <section id="services">
+              <h2 style="text-align: center;"><strong>Services</strong></h2>
+                <div class="row justify-content-center my-5">
+                    <div class="col-md-6 col-lg-6 col-sm-12">
+                        <p>We envision a brighter world for humanity.<br>Therefore, we aim to touch one life at a time, with the hope that the beneficiaries will one day transform other lives</p>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-sm-12">
+                      <div id="accordion">
+                        <div class="card">
+                          <div class="card-header" id="HeadingOne">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" style="color: #00008B" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Mission and Vision
+                              </button>
+                            </h5>
+                          </div>
+                      
+                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body" style="color: #8b8a8c;">
+                             Our mission is to bridge the gaps in humanity through our services.<br>Our vision is to be the best humanitarian organization in East Africa in the next 10 years.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link collapsed" style="color:  #00008B" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Leadership and Culture
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body" style="color: #8b8a8c;">
+                             Our organization has three leaders who work hand-in hand with the community and ensures that our impact is felt at grassroot level. 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link collapsed" style="color: #00008B;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Funding
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body" style="color: #8b8a8c;">
+                              So far, our funding comes from well-wishers. We are calling on anyone who is willing to donate or work with us to reach out. 
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                </div>
+            </section>
+            
+            <!--Beginning of Leaders Page-->
+            <section id="leaders">
+              <h2 class="text-center"><strong></strong>Our Leaders</strong></h2>
+              <p class="text-center my-5">The three co-founders all bring to the table unmatched experience and expertise.<br>Before coming together, each of them was already carrying out acts of service and love within the community.</p>
+                  <div class="row justify-content-center my-5">
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+                      <img src="women.svg" class="welcome-image">
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+                      <img src="women.svg" class="welcome-image">
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+                      <img src="women.svg" class="welcome-image">
+  
+                    </div>
+                  </div>
+            </section>
+           
+            <!--End of Leaders Page-->
+            <!--Beginning of Contact Page-->
+            <section id="contact">
+              <div class="row justfy-content-center">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                  <img src="contact.svg" class="welcome-image">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                  <div class="form">
+                    <h2><strong>Find Out How We Could Work Together</strong></h2>
+                    <p>Email us at relationshiphavenke@gmail.com</p>
+                    <input class="form-control my-5" type="text" placeholder="Name*">
+                    <input class="form-control my-5" type="text" placeholder="Email*">
+                    <input class="form-control my-5" type="text" placeholder="Phone">
+                    <input class="form-control my-5" type="text" placeholder="Name*">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1"></label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write your message here"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary my-5">Submit</button>
+
+                  </div>
+                </div>
+              </div>  
+              
+            </section>
+            <!--End of Contact Page-->
+            <!--Beginning of Support page-->
+            <section id="support"></section>
+            <h2 class="text-center"><strong>Support Our Work</strong></h2>
+            <p class="text-center">By donating to Relationship Haven, you're helping us make a better world</p>
+            <div class="row justify-content-center my-5">
+              <a href=https://www.paypal.com>
+                <i class="fa fa-4x fa-paypal mx-5 hover-transform" aria-hidden="true"></i>
+              </a>
+              <a href=https://www.visa.com>
+                <i class="fa fa-4x fa-cc-visa mx-5 hover-transform" aria-hidden="true"></i>
+              </a>
+            </div>
+           
+          
+          
+
+
+               
+        </div>
+        <!-- Footer -->
+<footer class="page-footer font-small">
+  <p class="text-center"><strong>Humanity | Bridges | Leadership</strong></p>
+  <p class="text-center"><strong>Our purpose is to build brideges between humans. We do this through our courage, passion and help from the community.</strong></p>
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Privacy|Terms of Use<br>© 2020 Copyright:
+    <a href="https://relationshiphavenke.com/"> relationshiphavenke.com</a>
+   
+   
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
