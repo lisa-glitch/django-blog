@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from myblog.views import CategoryDelete, CategoryList, MyView, CategoryDetail, CategoryCreate, CategoryUpdate
+from myblog.views import CategoryDelete, CategoryList, MyView, CategoryDetail, CategoryCreate, CategoryUpdate, SimpleFormView, welcome
 
 
 urlpatterns=[
@@ -11,5 +11,7 @@ urlpatterns=[
     path('create/category', CategoryCreate.as_view(), name='category_create'),
     path('category/update/<pk>/', CategoryUpdate.as_view(), name='category_update'),
     path('category/delete/<pk>/',CategoryDelete.as_view(), name='category_delete'),
+    path("simple/form", SimpleFormView.as_view(), name="simple_form"),
+    path('welcome', views.welcome, name='welcome')
 
 ]

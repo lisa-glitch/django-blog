@@ -1,10 +1,11 @@
+from myblog.forms import SimpleForm
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Category
 from django.views import View
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView, UpdateView,DeleteView
+from django.views.generic.edit import CreateView, UpdateView,DeleteView, FormView
 from django.urls import reverse
 
 
@@ -45,5 +46,21 @@ class CategoryDelete(DeleteView):
 
     success_url="/categories"
 
+class SimpleFormView(FormView):
 
+    #specify the form you want to use
+    form_class= SimpleForm
+
+    #specify name of template
+    template_name="simpleform.html"
+
+    #specify success url
+    success_url="/categories"
+
+def welcome(request):
+        context={
+            'name':'Lisa',
+            'email': 'lisaoloo001@gmail.com',
+        }
+        return render(request, "welcome.html", context)
 
