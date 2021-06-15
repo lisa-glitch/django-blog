@@ -12,6 +12,7 @@ urlpatterns=[
     path('category/update/<pk>/', CategoryUpdate.as_view(), name='category_update'),
     path('category/delete/<pk>/',CategoryDelete.as_view(), name='category_delete'),
     path("simple/form", SimpleFormView.as_view(), name="simple_form"),
-    path('welcome', views.welcome, name='welcome')
+    path('welcome', views.welcome, name='welcome'),
+    path('posts', views.posts,name="posts")
 
 ]

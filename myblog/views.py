@@ -7,6 +7,8 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView,DeleteView, FormView
 from django.urls import reverse
+from django.contrib.auth.models import User
+
 
 
 # Create your views here.
@@ -58,9 +60,20 @@ class SimpleFormView(FormView):
     success_url="/categories"
 
 def welcome(request):
-        context={
-            'name':'Lisa',
-            'email': 'lisaoloo001@gmail.com',
-        }
-        return render(request, "welcome.html", context)
+
+    context = {}
+
+    context = User.objects.all()
+
+        # context={
+        #     'name':'Jazzy','Lopha'
+        #     'email': 'lisaoloo31@gmail.com','Travels'
+        # }
+    return render(request, "welcome.html", context)
+
+def posts (request):
+    context={} 
+
+
+    return render (request,'myblog/post_list.html', context)
 

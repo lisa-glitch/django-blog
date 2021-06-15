@@ -1,3 +1,5 @@
+{% extends 'master.html' %}
+{% block content%}
 <a href="{% url 'category_create' %}">Add Category</a>
 
 <ul>
@@ -13,5 +15,8 @@
     <li>No objects yet. </li>
     {% endfor %}
 </ul>
+
+{% endblock content %}
+
 
 
