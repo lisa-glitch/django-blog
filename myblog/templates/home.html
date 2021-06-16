@@ -3,8 +3,41 @@
 {% load static %}
 
 {% block content%}
+<div class="container-fluid">
+<!--Beginning of Welcome/Index.html-->
+<section id="index">
+    <div class="row justify-content-center my-5">
+      <div class="col-md-6 col-lg-6 col-sm-12 mt-5">
+          <h1 class="my-5"><strong>Relationship Haven.<br>Bridging Gaps in Humanity.<strong></strong></h1>
+      </div>
+      <div class="col md-6 col-lg-6 col-sm-12">
+          <img class="welcome-image my-auto" src="first-image.svg">
+      </div>
+  </div>
+  </section>
+<!--End of Index/Welcome Page-->
+<!--Beginning of Recent POsts-->
+<div class="row justify-content-center">
+    <h2>Recent Posts</h2>
+</div>
+<div class="row justify-content-center">
+    {% for object in objects %}
+    <div class="col-md-6 col-lg-3 col-sm-12">
+        {% include 'simple_post.html' %}
+    </div>
+    {% endfor %}
+</div>
+<!--End of Recent Posts-->
+<div class="row justify-content-center my-5">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+        <h2 class="text-center">Say Hi</h2>
+    </div>
+    <div class="col-md-12 col-lg-12 col-sm-12 text-center">
+        <a class="btn btn-primary" href="#">Contact Me</a>
+    </div>
+    
+</div>
 
-<h1 classs=text-chocolate>This is my first page</h1>
-<img src="{% static 'image.svg' %}" alt= "What's Poppin">
 
+           
 {% endblock content %}

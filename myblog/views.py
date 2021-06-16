@@ -1,7 +1,7 @@
 from myblog.forms import SimpleForm
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Category
+from .models import Category, Feedback, Post
 from django.views import View
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -17,7 +17,7 @@ def home(request):
     #with field name as keys
     context= {}
     #add dictionary during initialization
-    context["dataset"]= Category.objects.all()
+    context["objects"]= Post.objects.all()[:4]
     return render(request, "home.html", context)
 
 class MyView(View):
@@ -76,4 +76,25 @@ def posts (request):
 
 
     return render (request,'myblog/post_list.html', context)
+
+class PostDetail(DetailView):
+    model= Post
+
+class FeedbackCreate(CreateView):
+    model= Feedback
+    fields= {'user_name', 'message'}
+    
+    def get_success_url(self):
+        return reverse('home.html')
+
+class PostCreate(CreateView):
+    model= Post
+    fields= {'title', 'post', 'category_id'}
+    
+    def get_success_url(self):
+            return reverse('home.html')
+
+
+
+
 

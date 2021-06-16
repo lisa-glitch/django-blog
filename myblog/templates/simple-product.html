@@ -1,0 +1,10 @@
+<div class="card">
+    <img src="" class="card-img-top">
+    <div class="card-body">
+        <h4>{{object.title}}</h4>
+        <p>{{object.description}}</p>
+    </div>
+    <div class="card-footer">
+        <a href="{% url 'post_detail' object.id %}">Read More</a>
+    </div>
+</div>
