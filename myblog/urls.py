@@ -14,8 +14,8 @@ urlpatterns=[
     path("simple/form", SimpleFormView.as_view(), name="simple_form"),
     path('welcome', views.welcome, name='welcome'),
     path('posts', views.posts,name="posts"),
-    path('post/detail/<pk>/', PostDetail.as_view(),name='post_detail'),
+    path('post/detail/<pk>/<slug>', PostDetail.as_view(),name='post_detail'),
     path('create/post', PostCreate.as_view(), name='post_create'),
-
-
+    path('model/form/category', views.formCategory),
+    path('comments', views.add_comment, name='comment_form')
 ]

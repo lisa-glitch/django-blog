@@ -1,0 +1,18 @@
+<form method="POST" ENCTYPE="multipart/form-data">
+    <!--Security Token-->
+    {% csrf_token %}
+    <!--Using Django's formset-->
+    <div class="field-wrapper">
+        {{form.name.errors}}
+        <label for= "{{form.name.id_for_label}}">Name</label>
+        {{form.name}}
+
+    </div>
+    <div class="field-wrapper">
+        {{form.parent_id.errors}}
+        <label for= "{{form.parent.id.id_for_label}}">Parent Category</label>
+        {{form.parent_id}}
+        
+    </div>
+<input type= "button" value= "Save" class= "btn btn-primary">
+</form>

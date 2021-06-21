@@ -5,6 +5,6 @@
         <p>{{object.description}}</p>
     </div>
     <div class="card-footer">
-        <a href="{% url 'post_detail' object.id %}">Read More</a>
+        <a href="{% url 'post_detail' object.id object.title %}">Read More</a>
     </div>
 </div>

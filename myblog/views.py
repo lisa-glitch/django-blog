@@ -1,4 +1,5 @@
-from myblog.forms import SimpleForm
+from django import forms
+from myblog.forms import SimpleForm, CategoryForm, CommentForm
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Category, Feedback, Post
@@ -85,14 +86,43 @@ class FeedbackCreate(CreateView):
     fields= {'user_name', 'message'}
     
     def get_success_url(self):
-        return reverse('home.html')
+        return reverse('home') #Here you write the url path name, not a template file name
 
 class PostCreate(CreateView):
     model= Post
     fields= {'title', 'post', 'category_id'}
     
     def get_success_url(self):
-            return reverse('home.html')
+            return reverse('home') #Here you write the url path name, not a template file name
+
+def formCategory(request):
+    context= {}
+
+    form = CategoryForm(request.POST)
+
+    if form.is_valid():
+        form.save
+
+    context['form']= form
+    return render(request, 'custom_category_form.html', context)
+
+def add_comment(request):
+    
+    if request.method == "POST":
+        form=CommentForm(request.POST)
+        if form.is_valid():
+            comment=form.cleaned_data['post']
+            return HttpResponse(comment)
+    
+    else:
+        context= {}
+        form= CommentForm()
+        context['form']=form
+        return render(request, "comment.html", context)
+
+
+
+
 
 
 
